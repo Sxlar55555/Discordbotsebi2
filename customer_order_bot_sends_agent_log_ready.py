@@ -1,3 +1,4 @@
+import os
 import discord
 import aiohttp
 from discord.ext import commands
@@ -6,7 +7,7 @@ from discord import app_commands
 # ============================================================
 # EDIT THESE
 # ============================================================
-TOKEN = "MTUxMjkwMzgwMDkzNDEwNTEzOA.Gdo6In.gG82QKcZiTrPx3HpT1nK80oyDM9QJg4vbeYNDw"
+TOKEN = os.getenv("TOKEN")
 GUILD_ID = 1512886556711714897  # server ID
 
 # Channel where the order ticket panel should be sent
@@ -327,3 +328,4 @@ if TOKEN == "PASTE_YOUR_BOT_TOKEN_HERE" or not TOKEN:
     raise RuntimeError("Paste your bot token at the top of the file.")
 
 bot.run(TOKEN)
+
